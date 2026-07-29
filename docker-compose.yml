@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: online-store-pg
+    environment:
+      POSTGRES_DB: online_store
+      POSTGRES_USER: store
+      POSTGRES_PASSWORD: store_dev_pass
+    ports:
+      - "5435:5432"
+    volumes:
+      - online_store_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U store -d online_store"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  online_store_pgdata:

@@ -1,0 +1,41 @@
+# Ignore build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+
+# NuGet
+*.nupkg
+**/packages/*
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Secrets / local overrides
+appsettings.*.local.json
+*.pfx
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
